@@ -60,7 +60,7 @@ RSpec.describe CallbackController, type: :controller do
       end
 
       it "sets the flash to the error message" do
-        expect(controller).to set_flash.now.to("An error has occurred: Error")
+        expect(controller).to set_flash.now.to("We're having some technical difficulties at the moment. Please try again in a few minutes")
       end
     end
   end

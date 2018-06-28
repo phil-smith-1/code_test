@@ -19,7 +19,8 @@ class CallbackController < ApplicationController
     ExternalAdapters::MakeItCheaperApi.post("api/v1/create", @params_to_send)
     redirect_to "/", notice: "Callback request received, we'll be in touch soon"
   rescue Exception => e
-    flash.now.alert = "An error has occurred: #{e.message}"
+    Rails.logger.error(e)
+    flash.now.alert = "We're having some technical difficulties at the moment. Please try again in a few minutes"
     render :new
   end
 
