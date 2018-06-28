@@ -36,18 +36,24 @@ class CallbackController < ApplicationController
   end
 
   def valid_name?
-    !@params_to_send.blank? && @params_to_send[:name].length <= 100
+    !@params_to_send[:name].blank? &&
+      @params_to_send[:name].length <= 100
   end
 
   def valid_business_name?
-    !@params_to_send.blank? && @params_to_send[:business_name].length <= 100
+    !@params_to_send[:business_name].blank? &&
+      @params_to_send[:business_name].length <= 100
   end
 
   def valid_telephone_number?
-    !@params_to_send.blank? && @params_to_send[:telephone_number].length <= 13 && /[\D&&\S]/.match(@params_to_send[:telephone_number]).nil?
+    !@params_to_send[:telephone_number].blank? &&
+      @params_to_send[:telephone_number].length <= 13 &&
+      /[\D&&\S]/.match(@params_to_send[:telephone_number]).nil?
   end
 
   def valid_email?
-    !@params_to_send.blank? && @params_to_send[:email].length <= 80 && @params_to_send[:email].include?('@')
+    !@params_to_send[:email].blank? &&
+      @params_to_send[:email].length <= 80 &&
+      @params_to_send[:email].include?('@')
   end
 end

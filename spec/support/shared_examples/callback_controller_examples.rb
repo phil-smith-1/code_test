@@ -1,4 +1,4 @@
-RSpec.shared_examples "error_examples" do |message|
+RSpec.shared_examples 'error_examples' do |message|
   it 'renders the form' do
     expect(controller).to render_template(:new)
   end
