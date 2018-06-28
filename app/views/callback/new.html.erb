@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <div class="row">
+    <% if notice %>
+      <div class="col-4 offset-4 alert-success"><%= notice %></div>
+    <% end %>
+    <% if alert %>
+      <div class="col-4 offset-4 alert-danger"><%= alert %></div>
+    <% end %>
+    <div class="col-4 offset-4">
+      <h3>Fill in the form for a quick call</h3>
+      <%= form_tag("/callback/submit") do |f| %>
+        <div class="form-group">
+          <%= text_field_tag("name", @params_to_send[:name] || "", placeholder: "Your full name", class: "form-control", required: true) %>
+        </div>
+        <div class="form-group">
+          <%= text_field_tag("business_name", @params_to_send[:business_name], placeholder: "Business name", class: "form-control", required: true) %>
+        </div>
+        <div class="form-group">
+          <%= telephone_field_tag("telephone_number", @params_to_send[:telephone_number], placeholder: "Your telephone number", class: "form-control", required: true) %>
+        </div>
+        <div class="form-group">
+          <%= email_field_tag("email", @params_to_send[:email], placeholder: "Your email Address", class: "form-control", required: true) %>
+        </div>
+        <%= submit_tag("REQUEST A CALLBACK", class: "btn btn-primary") %>
+      <% end %>
+    </div>
+  </div>
+</div>
