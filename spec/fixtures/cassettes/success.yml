@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mic-leads.dev-test.makeiteasy.com/api/v1/create?access_token=1f56571e69f7c6d73100fce551c777b8&business_name=Dave%20Newson%20LTD&email=dave.newson@deavenewson.co.uk&name=Dave%20Newson&pAccName=MicDevtest&pGUID=CFFBF53F-6D89-4B5B-8B36-67A97F18EDEB&pPartner=MicDevtest&telephone_number=07654%20321%20123
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"a3647de73f830d5cb5c63d7ccddd62ec"
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Runtime:
+      - '0.022594'
+      X-Request-Id:
+      - 63f33ef5-b8e1-495b-af7d-676b084d415a
+      Date:
+      - Wed, 27 Jun 2018 19:44:21 GMT
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      - cloud66
+      Server:
+      - nginx + Phusion Passenger 5.1.12
+    body:
+      encoding: UTF-8
+      string: '{"message":"Enqueue success","errors":[]}'
+    http_version: 
+  recorded_at: Wed, 27 Jun 2018 19:00:00 GMT
+recorded_with: VCR 4.0.0

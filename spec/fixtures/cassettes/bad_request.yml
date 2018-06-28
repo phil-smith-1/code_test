@@ -1,0 +1,111 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://mic-leads.dev-test.makeiteasy.com/wrong-path?access_token=1f56571e69f7c6d73100fce551c777b8&business_name=Dave%20Newson%20LTD&email=dave.newson@deavenewson.co.uk&name=Dave%20Newson&pAccName=MicDevtest&pGUID=CFFBF53F-6D89-4B5B-8B36-67A97F18EDEB&pPartner=MicDevtest&telephone_number=07654%20321%20123
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Content-Type:
+      - text/html; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 404 Not Found
+      X-Runtime:
+      - '0.001282'
+      X-Request-Id:
+      - 5562c3e5-ce52-411d-9114-f069c7a45871
+      Date:
+      - Wed, 27 Jun 2018 19:44:22 GMT
+      X-Powered-By:
+      - Phusion Passenger 5.1.12
+      Server:
+      - nginx + Phusion Passenger 5.1.12
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <title>The page you were looking for doesn't exist (404)</title>
+          <meta name="viewport" content="width=device-width,initial-scale=1">
+          <style>
+          .rails-default-error-page {
+            background-color: #EFEFEF;
+            color: #2E2F30;
+            text-align: center;
+            font-family: arial, sans-serif;
+            margin: 0;
+          }
+
+          .rails-default-error-page div.dialog {
+            width: 95%;
+            max-width: 33em;
+            margin: 4em auto 0;
+          }
+
+          .rails-default-error-page div.dialog > div {
+            border: 1px solid #CCC;
+            border-right-color: #999;
+            border-left-color: #999;
+            border-bottom-color: #BBB;
+            border-top: #B00100 solid 4px;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+            background-color: white;
+            padding: 7px 12% 0;
+            box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+          }
+
+          .rails-default-error-page h1 {
+            font-size: 100%;
+            color: #730E15;
+            line-height: 1.5em;
+          }
+
+          .rails-default-error-page div.dialog > p {
+            margin: 0 0 1em;
+            padding: 1em;
+            background-color: #F7F7F7;
+            border: 1px solid #CCC;
+            border-right-color: #999;
+            border-left-color: #999;
+            border-bottom-color: #999;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            border-top-color: #DADADA;
+            color: #666;
+            box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+          }
+          </style>
+        </head>
+
+        <body class="rails-default-error-page">
+          <!-- This file lives in public/404.html -->
+          <div class="dialog">
+            <div>
+              <h1>The page you were looking for doesn't exist.</h1>
+              <p>You may have mistyped the address or the page may have moved.</p>
+            </div>
+            <p>If you are the application owner check the logs for more information.</p>
+          </div>
+        </body>
+        </html>
+    http_version: 
+  recorded_at: Wed, 27 Jun 2018 19:00:00 GMT
+recorded_with: VCR 4.0.0
